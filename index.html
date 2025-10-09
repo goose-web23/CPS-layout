@@ -14,7 +14,7 @@
     <ul class="header__navigation">
       <div class="header-left">
         <li class="header__navigation--link left">
-          <img src="./src/images/burger.svg" />
+          <img id='burger-btn' src="./src/images/burger.svg" />
         </li>
         <li class="header__navigation--divider1 left">
         </li>
@@ -43,6 +43,10 @@
       </div>
     </ul>
   </header>
+
+  <div id="burger-menu">
+    <h1>бургер меню</h1>
+  </div>
 
   <div class="services">
     <h1>Услуги и сервисы</h1>
@@ -120,23 +124,26 @@
     <div class="repair__head">
       <p>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</p>
     </div>
-    <div class="repair__container">
-      <div class="repair__container--slideTech">
-        <p class="rep_txt">Ремонт ноутбуков</p>
-        <img class="go-btn" src="./src/images/go.png">
+    <div class="swiper">
+      <div class="swiper-wrapper repair__container">
+        <div class="swiper-slide repair__container--slideTech">
+          <p class="rep_txt">Ремонт ноутбуков</p>
+          <img class="go-btn" src="./src/images/go.png">
+        </div>
+        <div class="swiper-slide repair__container--slideTech">
+          <p class="rep_txt">Ремонт планшетов</p>
+          <img class="go-btn" src="./src/images/go.png">
+        </div>
+        <div class="swiper-slide repair__container--slideTech">
+          <p class="rep_txt">Ремонт ПК</p>
+          <img class="go-btn" src="./src/images/go.png">
+        </div>
+        <div class="swiper-slide repair__container--slideTech">
+          <p class="rep_txt">Ремонт мониторов</p>
+          <img class="go-btn" src="./src/images/go.png">
+        </div>
       </div>
-      <div class="repair__container--slideTech">
-        <p class="rep_txt">Ремонт планшетов</p>
-        <img class="go-btn" src="./src/images/go.png">
-      </div>
-      <div class="repair__container--slideTech">
-        <p class="rep_txt">Ремонт ПК</p>
-        <img class="go-btn" src="./src/images/go.png">
-      </div>
-      <div class="repair__container--slideTech">
-        <p class="rep_txt">Ремонт мониторов</p>
-        <img class="go-btn" src="./src/images/go.png">
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
     <div class="about-text__more-hidden">
       <img src="./src/images/стрелка.svg">
@@ -261,7 +268,8 @@
     <p class="footer__row">Политика конфиденциальности</p>
     <p class="footer__row-right">Информация, размещенная на данной странице, не является публичной офертой</p>
   </footer>
-
-</body>
+  <script type="module" src="./src/script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
 </html>

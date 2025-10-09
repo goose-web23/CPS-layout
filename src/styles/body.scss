@@ -93,6 +93,11 @@ body {
     }
 }
 
+.swiper {
+    width: 100%;
+    height: 100px;
+}
+
 .services {
     h1 {
         font-family: 'TT';
@@ -102,6 +107,8 @@ body {
         gap: 5px;
         padding-left: 15px;
         margin-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 5px;
     }
 
     &__container {
@@ -132,6 +139,19 @@ body {
     }
 }
 
+.swiper {
+    width: 100vw;
+    height: 200px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #909090 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #808080 !important;
+}
+
 .repair {
     &__head {
         display: flex;
@@ -146,22 +166,23 @@ body {
         background-color: white;
         border-top: 1px solid #41F6D7;
         width: 100%;
+
+        p {
+            width: 80%;
+        }
     }
 
     &__container {
         margin-left: 5px;
         margin-bottom: 10px;
         display: flex;
-        gap: 25px;
-        overflow-x: auto;
+        // gap: 20px; - мешает слайдеру
         width: 100%;
         padding: 10px 5px;
-        scrollbar-width: none;
 
         @media (min-width: 768px) {
             display: grid;
             grid-template-columns: 30% 30% 30%;
-            gap: 3%;
             max-height: 150px;
             overflow: hidden;
         }
@@ -181,11 +202,11 @@ body {
         }
 
         &--slideTech {
-            display: flex;
-            justify-content: space-between;
+            display: flex !important;
+            justify-content: space-between !important;
             align-items: center;
-            width: 200px;
-            height: 150px;
+            width: 200px !important;
+            height: 150px !important;
             white-space: nowrap;
             background-color: white;
             border-radius: 8px;
@@ -317,8 +338,8 @@ body {
 }
 
 .logo-company {
-    width: 70px;
-    height: 20px;
+    width: 90px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -345,3 +366,5 @@ body {
         margin-left: 5px;
     }
 }
+
+/* css */
