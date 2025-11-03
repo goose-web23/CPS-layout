@@ -13,35 +13,32 @@
   <header class="header">
     <ul class="header__navigation">
       <div class="header-left">
-        <li class="header__navigation--link left">
-          <img id='burger-btn' src="./src/images/burger.svg" />
+        <li id='burger-btn' class="header__navigation--link">
+          <img src="./src/images/burger.svg" />
         </li>
-        <li class="header__navigation--divider1 left">
+        <li class="header__navigation--divider1">
         </li>
-        <li class="header__navigation--logo left">
+        <li class="header__navigation--logo">
           <img src="./src/images/logo.svg" />
         </li>
       </div>
       <div class="header-right">
-        <li class="header__navigation--link-hidden right">
+        <li class="header__navigation--link-hidden">
           <img src="./src/images/call.svg" />
         </li>
-        <li class="header__navigation--link-hidden right">
+        <li class="header__navigation--link-hidden">
           <img src="./src/images/message.svg" />
         </li>
-        <li class="header__navigation--link-hidden right">
+        <li class="header__navigation--link-hidden">
           <img src="./src/images/user.svg" />
         </li>
-        <li class="header__navigation--divider right">
+        <li class="header__navigation--divider">
         </li>
-        <li class="burger-hidden header__navigation--link right">
+        <li class="header__navigation--link">
           <img src="./src/images/tools.svg" />
         </li>
-        <li class="burger-hidden header__navigation--link right">
+        <li class="header__navigation--link">
           <img src="./src/images/search.svg" />
-        </li>
-        <li class="burger-search header__navigation--link">
-          <img src="./src/images/burger-search.png" />
         </li>
       </div>
     </ul>
@@ -49,6 +46,22 @@
 
   <div id="burger-menu">
     <div class="burger-menu">
+      <ul class="burger-menu__header">
+        <div class="burger-menu__header-left">
+          <li id='close-btn' class="burger-menu__header--el">
+            <img src="./src/images/close.png" />
+          </li>
+          <li class="burger-menu__header--logo">
+            <img src="./src/images/logo.svg" />
+          </li>
+        </div>
+        <div class="header-right">
+          <li class="burger-menu__header--el">
+            <img src="./src/images/burger-search.png" />
+          </li>
+        </div>
+      </ul>
+
       <ul class="burger-menu__list">
         <li class="burger-menu__list--link-active">Ремонт техники</li>
         <li class="burger-menu__list--link">Услуги и сервисы</li>
@@ -81,6 +94,8 @@
       </div>
     </div>
   </div>
+
+  <div id="burger-overlay" class="burger-overlay"></div>
 
   <div class="services">
     <h1>Услуги и сервисы</h1>

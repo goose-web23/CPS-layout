@@ -3,44 +3,45 @@
     src: url('/src/TTLakes-Regular.ttf');
 }
 
-#burger-menu {
+.burger-overlay {
     display: none;
-    /*     position: fixed;
+    position: fixed;
     top: 0;
-    left: 0; */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 99;
+}
+
+.burger-menu::-webkit-scrollbar {
+    display: none;
+}
+
+#burger-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     z-index: 100;
     overflow-y: auto;
     background-color: white;
 
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+
     @media (min-width: 768px) {
-        width: 320px;
+        width: 350px;
+        transform: translateX(-350px);
     }
-
 }
 
-.burger-search {
-    display: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background-color: #FF3E79;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-end;
-    margin-left: auto;
+#burger-menu.open {
+    transform: translateX(0);
+    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.3);
 }
-
-.burger-hidden {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background-color: #FF3E79;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .burger-menu {
     display: flex;
@@ -48,13 +49,58 @@
     height: 100vh;
     overflow-y: auto;
 
+    &__header {
+        border-bottom: 4px solid #D9FFF5;
+        list-style-type: none;
+        background-color: white;
+        height: 85px;
+        min-height: 85px;
+        display: flex;
+        gap: 30%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        &--el {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: #FF3E79;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        &--logo img {
+            width: 90px;
+            margin-right: 5vw;
+            flex-shrink: 0;
+        }
+
+        &-left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+            gap: 16px;
+        }
+
+        &-right {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
         gap: 15px;
         margin-top: 20px;
         list-style-type: none;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
 
         &--link {
             color: black;

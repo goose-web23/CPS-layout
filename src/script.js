@@ -1,27 +1,23 @@
 const burgerMenu = document.getElementById('burger-menu');
 const burgerBtn = document.getElementById('burger-btn');
-const burgerSearch = document.querySelector('.burger-search');
-const burgerHidden = document.querySelectorAll('.burger-hidden');
-const divider = document.querySelector('.header__navigation--divider');
+const closeBtn = document.getElementById('close-btn');
+const overlay = document.getElementById('burger-overlay');
 
 burgerBtn.addEventListener('click', function () {
-    if (burgerMenu.style.display === 'block') {
-        burgerMenu.style.display = 'none';
-        burgerBtn.src = "./src/images/burger.svg";
-        burgerSearch.style.display = 'none';
-        burgerHidden.forEach(el => {
-            el.style.display = 'flex';
-        })
-        divider.style.display = 'block';
-    } else {
-        burgerMenu.style.display = 'block';
-        burgerBtn.src = "./src/images/close.png";
-        burgerSearch.style.display = 'flex';
-        burgerHidden.forEach(el => {
-            el.style.display = 'none';
-        })
-        divider.style.display = 'none';
-    }
+    burgerMenu.classList.add('open');
+    overlay.style.display = 'block';
+    document.documentElement.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', function () {
+    burgerMenu.classList.remove('open');
+    overlay.style.display = 'none';
+    document.documentElement.style.overflow = '';
+});
+overlay.addEventListener('click', function () {
+    burgerMenu.classList.remove('open');
+    overlay.style.display = 'none';
+    document.documentElement.style.overflow = '';
 });
 
 import Swiper from 'swiper';
