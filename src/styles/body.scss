@@ -141,15 +141,20 @@ body {
 
 .swiper {
     width: 100vw;
-    height: 200px;
+    height: auto;
 }
+
 
 .swiper-pagination-bullet {
     background-color: #909090 !important;
+    width: 10px !important;
+    height: 10px !important;
 }
 
 .swiper-pagination-bullet-active {
     background-color: #808080 !important;
+    width: 12px !important;
+    height: 12px !important;
 }
 
 .repair {
@@ -178,6 +183,7 @@ body {
         display: flex;
         // gap: 20px; - мешает слайдеру
         width: 100%;
+        height: auto;
         padding: 10px 5px;
 
         @media (min-width: 768px) {
@@ -188,17 +194,18 @@ body {
         }
 
         &--slideBrand {
-            display: flex;
-            justify-content: space-between;
+            display: flex !important;
+            justify-content: space-between !important;
             align-items: center;
-            width: 200px;
-            height: 50px;
+            width: 200px !important;
+            height: 50px !important;
             white-space: nowrap;
             background-color: white;
             border-radius: 8px;
             border: 2px solid #F8F8F8;
             padding: 0 15px;
             flex-shrink: 0;
+            margin-bottom: 15px;
         }
 
         &--slideTech {
@@ -214,6 +221,7 @@ body {
             padding: 0 15px;
             flex-shrink: 0;
             position: relative;
+            margin-bottom: 15px;
 
             p {
                 position: absolute;
@@ -235,11 +243,11 @@ body {
         }
 
         &--slidePrice {
-            display: flex;
-            flex-direction: column;
+            display: flex !important;
+            flex-direction: column !important;
             gap: 10px;
-            width: 200px;
-            height: 150px;
+            width: 200px !important;
+            height: 150px !important;
             background-color: white;
             position: relative;
             flex-shrink: 0;
@@ -247,25 +255,29 @@ body {
             border: 2px solid #F8F8F8;
             padding: 10px;
 
+
             @media (min-width: 768px) {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                width: 95%;
-                height: 50px;
-                align-items: center;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-around !important;
+                width: 95% !important;
+                height: 50px !important;
+                align-items: center !important;
             }
         }
     }
 }
 
 .prices {
+    margin-bottom: 30px !important;
+
     @media (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        max-height: max-content;
-        overflow: auto;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        max-height: max-content !important;
+        overflow: auto !important;
+        scrollbar-width: none;
     }
 
 }
@@ -298,10 +310,10 @@ body {
 }
 
 .price-head-hidden {
-    display: none;
+    display: none !important;
 
     @media (min-width: 768px) {
-        display: flex;
+        display: flex !important;
         background: none;
         font-size: 20px;
         color: darkgrey;
