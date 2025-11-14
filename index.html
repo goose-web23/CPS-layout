@@ -23,10 +23,10 @@
         </li>
       </div>
       <div class="header-right">
-        <li class="header__navigation--link-hidden">
+        <li id="call-btn" class="header__navigation--link-hidden">
           <img src="./src/images/call.svg" />
         </li>
-        <li class="header__navigation--link-hidden">
+        <li id="message-btn" class="header__navigation--link-hidden">
           <img src="./src/images/message.svg" />
         </li>
         <li class="header__navigation--link-hidden">
@@ -73,7 +73,7 @@
         <li class="burger-menu__list--link">Контакты</li>
       </ul>
       <ul class="burger-menu__btns">
-        <li class="header__navigation--link">
+        <li id="call-btn-burger" class="header__navigation--link">
           <img src="./src/images/call.svg" />
         </li>
         <li class="header__navigation--link">
@@ -92,6 +92,39 @@
         <button class="language">EN</button>
         <button class="language">CH</button>
       </div>
+    </div>
+  </div>
+
+  <div id="callModal">
+    <div class="modal">
+      <button id="modal__close" class="modal__close">
+        <img src="./src/images/close.png" />
+      </button>
+      <h2 class="modal__heading">Заказать звонок</h2>
+      <input class="modal__input" type="text" placeholder="Телефон">
+      <p>Нажимая “отправить”, вы даете согласие на <a>обработку персональных данных</a> и соглашаетесь с нашей
+        <a>политикой конфиденциальности</a>
+      </p>
+      <button id="modal__send" class="modal__send">Отправить ></button>
+    </div>
+  </div>
+
+  <div id="messageModal">
+    <div class="modal">
+      <button id="modal__close" class="modal__close">
+        <img src="./src/images/close.png" />
+      </button>
+      <h2 class="modal__heading">Обратная связь</h2>
+      <form class="modal__form">
+        <input class="modal__input" type="text" placeholder="Имя">
+        <input class="modal__input" type="text" placeholder="Телефон">
+        <input class="modal__input" type="email" placeholder="Электронная почта">
+        <textarea class="modal__textarea modal__input" placeholder="Сообщение"></textarea>
+      </form>
+      <p>Нажимая “отправить”, вы даете согласие на <a>обработку персональных данных</a> и соглашаетесь с нашей
+        <a>политикой конфиденциальности</a>
+      </p>
+      <button id="messageModal__send" class="modal__send">Отправить ></button>
     </div>
   </div>
 
@@ -318,8 +351,11 @@
     <p class="footer__row">Политика конфиденциальности</p>
     <p class="footer__row-right">Информация, размещенная на данной странице, не является публичной офертой</p>
   </footer>
-  <script type="module" src="./src/script.js"></script>
+  <script type="module" src="./src/js/swiper.js"></script>
+  <script type="module" src="./src/js/modal.js"></script>
+  <script type="module" src="./src/js/burger.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</body>
 
 </html>
