@@ -144,5 +144,11 @@
         font-family: 'TT';
         font-weight: 600;
         cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #FFE0E9;
+            color: var(--pink-item);
+        }
     }
 }

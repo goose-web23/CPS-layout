@@ -20,24 +20,24 @@ body {
 
     &-left {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         width: 55%;
+        gap: 10%;
 
         @media (min-width: 768px) {
-            justify-content: flex-start;
             gap: 4vw;
         }
     }
 
     &-right {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         width: 45%;
+        gap: 15%;
 
         @media (min-width: 768px) {
-            justify-content: flex-end;
             gap: 3vw;
         }
     }

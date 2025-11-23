@@ -61,6 +61,20 @@ body {
     }
 
     &-text {
+        &__more {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 5px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            img {
+                width: 40px;
+            }
+        }
+
         @media (min-width: 768px) {
             width: 100%;
             margin-right: 20px;
@@ -69,50 +83,22 @@ body {
 
         &--hidden {
             display: none;
+            font-weight: bold;
+            cursor: pointer;
 
-            @media (min-width: 768px) {
-                display: block;
-                margin-top: 10px;
+            img {
+                width: 40px;
             }
-        }
-    }
-
-    p {
-        padding-left: 10px;
-    }
-
-    &-text__more {
-        display: flex;
-        justify-content: left;
-        flex-direction: row;
-        margin-top: 10px;
-        margin-left: 5px;
-        font-weight: bold;
-        margin-bottom: 20px;
-
-
-        &-hidden {
-            display: none;
-            margin-bottom: 2vw;
-            padding-left: 20px;
-            gap: 5px;
-            align-items: center;
 
             @media (min-width: 768px) {
                 display: flex;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     }
 
-    &__more p {
-        margin-left: 5px;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-
-    &__more img {
-        width: 40px;
-    }
 }
 
 .company {
@@ -135,7 +121,6 @@ body {
 
 .services {
     position: relative;
-    padding-left: 15px;
     padding-top: 15px;
 
     &::before {
@@ -199,6 +184,7 @@ body {
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         width: 100%;
+        scroll-behavior: smooth;
 
         @media (min-width: 768px) {
             width: auto;
@@ -211,14 +197,17 @@ body {
             align-items: center;
             width: 230px;
             height: 40px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             white-space: nowrap;
-            background-color: white;
-            border-radius: 8px;
-            border: 2px solid var(--bg-cl-grey);
             padding: 0 15px;
+            cursor: pointer;
         }
     }
+}
+
+.services-active {
+    border: 2px solid var(--cyan-border);
+    border-radius: 8px;
+    background-color: white;
 }
 
 .swiper {
@@ -275,9 +264,18 @@ body {
 
         @media (min-width: 768px) {
             display: grid !important;
-            grid-template-columns: repeat(4, 25%);
+            grid-template-columns: repeat(3, 1fr);
             row-gap: 10px;
             max-height: 150px;
+            overflow: hidden;
+            width: auto;
+        }
+
+        @media (min-width: 1440px) {
+            display: grid !important;
+            grid-template-columns: repeat(4, 25%);
+            row-gap: 10px;
+            // max-height: 150px;
             overflow: hidden;
             width: auto;
         }
@@ -286,8 +284,8 @@ body {
             display: flex !important;
             justify-content: space-between !important;
             align-items: center;
-            width: 200px;
-            height: 50px;
+            width: 200px !important;
+            height: 50px !important;
             white-space: nowrap;
             background-color: white;
             border-radius: 8px;
@@ -297,8 +295,8 @@ body {
             margin-bottom: 15px;
 
             @media (min-width: 768px) {
-                width: 220px !important;
-                height: 60px !important;
+                width: 220px;
+                height: 60px;
             }
         }
 
