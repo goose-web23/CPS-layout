@@ -4,7 +4,10 @@
 }
 
 #callModal,
-#messageModal {
+#messageModal,
+#userModal,
+#toolsModal,
+#searchModal {
     display: block;
     position: fixed;
     top: 0;
@@ -12,7 +15,6 @@
     width: 100%;
     height: 100%;
     z-index: 120;
-    overflow-y: auto;
     background-color: white;
 
     transform: translateX(100%);
@@ -21,31 +23,47 @@
     @media (min-width: 768px) {
         width: 350px;
         transform: translateX(350px);
+        overflow-y: visible;
     }
 }
 
-#callModal.open {
+#callModal.open,
+#messageModal.open,
+#userModal.open,
+#toolsModal.open,
+#searchModal.open {
     transform: translateX(0);
     box-shadow: 8px 0 20px rgba(0, 0, 0, 0.3);
 }
 
-#messageModal.open {
-    transform: translateX(0);
-    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.3);
-}
-
-#modal__close {
+.modal__close {
     width: 40px;
     height: 40px;
+    margin-bottom: 20px;
     border-radius: 100%;
-    background-color: #FF3E79;
+    background-color: var(--pink-item);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     border: none;
-    margin: 15px;
     cursor: pointer;
+    z-index: 121;
+
+    @media (min-width: 768px) {
+        display: none;
+        position: absolute;
+        left: -60px;
+        top: 15px;
+
+        #callModal.open &,
+        #messageModal.open &,
+        #userModal.open &,
+        #toolsModal.open &,
+        #searchModal.open & {
+            display: flex;
+        }
+    }
 }
 
 .modal {
@@ -60,11 +78,22 @@
         font-family: 'TT';
         font-size: 20px;
         font-weight: bold;
-        border-left: 5px solid #41F6D7;
-        padding-left: 10px;
+        padding-left: 15px;
         margin-bottom: 15px;
-        padding-top: 10px;
+        padding-top: 20px;
         padding-bottom: 5px;
+
+        &::before {
+            content: "";
+            width: 5px;
+            height: 40px;
+            background-color: var(--cyan-border);
+            position: absolute;
+            top: 15px;
+            left: 0;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
     }
 
     &__form {
@@ -83,7 +112,7 @@
         width: 90%;
         padding-left: 10px;
         margin-left: 10px;
-        border: 2px solid #EAEAEA;
+        border: 2px solid var(--divider);
         height: 50px;
         border-radius: 1em;
     }
@@ -93,7 +122,7 @@
         font-size: 14px;
 
         a {
-            color: #FF3E79;
+            color: var(--pink-item);
             font-weight: bold;
         }
 
@@ -109,7 +138,7 @@
         height: 30px;
         border: none;
         border-radius: 15px;
-        background-color: #FF3E79;
+        background-color: var(--pink-item);
         color: white;
         font-size: 13px;
         font-family: 'TT';
