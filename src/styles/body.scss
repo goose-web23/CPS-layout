@@ -51,6 +51,9 @@ body {
     font-weight: 100;
     width: 100%;
 
+    &__get {
+        margin-left: 10px;
+    }
 
     @media (min-width: 768px) {
         display: grid;
@@ -159,6 +162,23 @@ body {
             display: flex;
             align-items: center;
             gap: 10px;
+
+            &:hover {
+                cursor: pointer;
+
+                p {
+                    color: var(--gray);
+                }
+
+                .header__navigation--link {
+                    border-color: transparent;
+                    background-color: #FFE0E9;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(33%) sepia(98%) saturate(1000%) hue-rotate(315deg) brightness(95%) contrast(101%);
+                    }
+                }
+            }
 
             @media (min-width: 1440px) {
                 display: flex;
@@ -356,6 +376,74 @@ body {
                 width: 95% !important;
                 height: 50px !important;
                 align-items: center !important;
+            }
+        }
+    }
+}
+
+.prices-mobile {
+    display: block;
+
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}
+
+.prices-table {
+    display: none !important;
+
+    @media (min-width: 768px) {
+        display: table !important;
+        width: 95%;
+        margin-left: 20px;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+    }
+
+    thead {
+        background-color: #f8f8f8;
+        width: 100%;
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-size: 14px;
+            color: var(--gray);
+            font-weight: normal;
+            border-bottom: 1px solid var(--bg-cl-grey);
+
+            &.desc-price {
+                width: 50%;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid var(--bg-cl-grey);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: #fafafa;
+            }
+        }
+
+        td {
+            padding: 16px;
+            vertical-align: middle;
+
+            &.desc-price {
+                width: 50%;
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
             }
         }
     }
