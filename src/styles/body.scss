@@ -296,7 +296,7 @@ body {
             display: grid !important;
             grid-template-columns: repeat(4, 25%);
             row-gap: 10px;
-            // max-height: 150px;
+            max-height: 200px !important;
             overflow: hidden;
             width: auto;
         }
@@ -319,6 +319,11 @@ body {
                 width: 220px;
                 height: 60px;
             }
+
+            @media (min-width: 1440px) {
+                width: 240px !important;
+                height: 72px !important;
+            }
         }
 
         &--slideTech {
@@ -335,6 +340,11 @@ body {
             flex-shrink: 0;
             position: relative;
             margin-bottom: 15px;
+
+            @media (min-width: 1440px) {
+                width: 240px !important;
+                height: 160px !important;
+            }
 
             p {
                 position: absolute;
@@ -540,6 +550,11 @@ body {
     width: 90px;
     height: 40px;
     object-fit: contain;
+
+    @media (min-width: 1440px) {
+        width: 120px;
+        height: 50px;
+    }
 }
 
 .go-btn {
